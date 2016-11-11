@@ -27,7 +27,7 @@ public class ClienteDao {
 	}
 
 	public List<Cliente> getClientes(){
-		String sql = "SELEC * FROM cliente";
+		String sql = "SELECT * FROM cliente";
 		List<Cliente> retorno = new ArrayList<Cliente>();
 		try{
 			connection = getConnection();
