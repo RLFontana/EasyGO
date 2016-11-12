@@ -27,7 +27,7 @@ public class ClienteDao {
 	}
 
 	public List<Cliente> getClientes(){
-		String sql = "SELECT * FROM cliente";
+		String sql = "SELECT * FROM cliente LEFT JOIN comanda ON cliente.Codigo=comanda.CodigoCliente";
 		List<Cliente> retorno = new ArrayList<Cliente>();
 		try{
 			connection = getConnection();
